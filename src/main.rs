@@ -13,15 +13,19 @@ fn main() {
 }
 
 fn handle_connections(mut stream: TcpStream) -> std::io::Result<()>  {
-    let mut buffer = String::new();
+    let mut buffer: [u8; 1024] = [0; 1024];
     loop {
-        let nbytes = stream.read_to_string(&mut buffer)?;
+        let nbytes = stream.read(&mut buffer).unwrap();
         if nbytes == 0 {
             return Ok(());
         }
-        println!("Received {} bytes {}", nbytes, buffer);
 
-        stream.write_all(b"some bytes");
+        println!("Received {} bytes ", nbytes);
+        // for i in 0..nbytes { // todo: print in hex
+        //     print!("{}", buffer[i]);
+        // }
+
+        stream.write(&buffer[0..nbytes]).unwrap();
         stream.flush()?;
     }
 }
