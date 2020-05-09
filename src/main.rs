@@ -2,8 +2,8 @@
 use std::net::{TcpListener, TcpStream, Shutdown};
 use std::io::{Write, Read};
 
-// Application version v.0.0.1 from 28.04.2020
-const APP_VERSION: &'static str = "0.0.1";
+// Application version v.0.0.3 from 09.05.2020
+const APP_VERSION: &'static str = "0.0.3";
 
 fn main() {
     println!("Hello, %username%! Application version v.{}.", APP_VERSION);
