@@ -1,6 +1,6 @@
 [package]
 name = "hello-world"
-version = "0.1.0"
+version = "0.0.1"
 authors = ["Dmitry Kalmykov"]
 edition = "2018"
 features = ["os-poll", "tcp"]
@@ -10,3 +10,4 @@ features = ["os-poll", "tcp"]
 
 [dependencies]
 mio = "0.6"
+piston2d-graphics = "0.36.0"
