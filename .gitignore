@@ -1,1 +1,4 @@
-/target
+# ignore builded target files folder
+target/
+# settings ide folder
+.vscode/

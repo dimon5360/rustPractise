@@ -1,9 +1,13 @@
 [package]
 name = "hello-world"
-version = "0.1.0"
+version = "0.0.1"
 authors = ["Dmitry Kalmykov"]
 edition = "2018"
+features = ["os-poll", "tcp"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+
 [dependencies]
+mio = "0.6"
+piston2d-graphics = "0.36.0"
