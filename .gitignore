@@ -3,4 +3,4 @@ target/
 # settings ide folder
 .vscode/
 # untrack *.lock files
-*.lock
+Cargo.lock
